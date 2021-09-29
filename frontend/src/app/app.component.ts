@@ -21,9 +21,12 @@ export class AppComponent {
   addCourse(event: MouseEvent): void {
     event.preventDefault();
 
+    const now = new Date();
+
     this.courses.push({
       title: this.courseTitle,
       description: this.courseDescription,
+      date: `${now.getDay()}/${now.getMonth()}/${now.getFullYear()}`,
     });
 
     this.courseTitle = '';

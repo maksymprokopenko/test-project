@@ -319,7 +319,6 @@ svg#clouds {
   }
 
   &__list {
-
     &-items {
       margin: 20px 0 0;
     }
@@ -335,13 +334,27 @@ svg#clouds {
         border: none;
       }
 
+      &-holder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0 0 10px;
+      }
+
       &-title {
-        margin: 0;
+        margin: 0 0 10px;
+        display: flex;
+      }
+
+      &-date {
+        font-size: 12px;
+        line-height: 16px;
+        color: #2C2C2C;
+        margin: 0 0 0 10px;
       }
 
       &-description {
         width: 100%;
-        padding: 0 10px;
       }
 
       input[type=checkbox] {

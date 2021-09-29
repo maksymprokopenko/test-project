@@ -35,8 +35,13 @@
       <div class="content__list-items">
         <div class="content__list-item" *ngFor="let course of courses">
           <input type="checkbox" (change)="handleSelect($event, course.title)" />
-          <h2 class="content__list-item-title">{{ course.title }}</h2>
-          <p class="content__list-item-description">{{ course.description }}</p>
+          <div class="content__list-item-holder">
+            <h2 class="content__list-item-title">
+              {{ course.title }}
+              <span class="content__list-item-date">{{course.date}}</span>
+            </h2>
+            <p class="content__list-item-description">{{ course.description }}</p>
+          </div>
           <a
             class="btn btn--secondary"
             (click)="deleteCourse($event, course.title)"
